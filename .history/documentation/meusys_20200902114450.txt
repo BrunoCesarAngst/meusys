@@ -1,0 +1,7 @@
+Meusys
+
+Um sistema de gerenciamento de ações.
+
+Esse sistema dará ao usuário o poder de gereciar as ações, através de registros que podem ser de escrita, áudio, fotografia ou vídeo.
+
+Em um primeiro momento, o usuário registra através desses recursos, qualquer tralha (tudo que está no ambiente físico, psicológico ou digital, que pode demandar ação ou não, )

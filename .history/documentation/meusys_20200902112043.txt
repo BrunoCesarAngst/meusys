@@ -1,0 +1,5 @@
+Meusys
+
+Um sistema de gerenciamento de ações.
+
+Através desse sistema o usuário terá o poder de gereciar as ações, através de registros que po 

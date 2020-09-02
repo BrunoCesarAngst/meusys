@@ -1,0 +1,12 @@
+Meusys
+
+Um sistema de gerenciamento de ações.
+
+Esse sistema dará ao usuário o poder de gereciar as ações, através de registros que podem ser de escrita, áudio, fotografia ou vídeo.
+
+Em um primeiro momento, o usuário registra através desses recursos, qualquer tralha (tudo que está no ambiente físico, psicológico ou digital, que pode demandar ação ou não, mas, não foi definido e ou está em situação indeterminada), gerando um backlog de várias coisas.
+  Após ter feito esses registros, o usuário fará determinações com cada registro da seguinte forma:
+  - O sistema irá primeiro questionar se dado registro demanda ação.
+  - Se não demanda ação, o usuário terá as opções de remover o registro, incubar (para algum dia/talvez) ou referenciar esse registro.
+  - Se o registro demanda ação, o sistema questionará se essa ação é simples ou composta.
+  - Se for uma ação composta, o sistema criará um projeto
