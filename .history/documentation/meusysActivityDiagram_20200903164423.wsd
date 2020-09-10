@@ -1,0 +1,6 @@
+@startuml meusys
+start
+:register;
+
+stop
+@enduml

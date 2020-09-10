@@ -1,0 +1,34 @@
+@startuml ginasio
+class pessoa {
+  # nome: 
+}
+
+class Clients {
+  - id: Int
+  - nome: String
+  - locaçao: List<Aluguel>
+}
+
+Clients "1"---*"0..*" Aluguel
+
+class Aluguel {
+  - cliente: Client
+  - tempo: Int
+  - quadra: Quadra
+}
+
+Aluguel "1"o---"1..*" Quadra
+
+class Quadra {
+  - numero: Int
+  - aluguel: Aluguel
+  - ginasio: Ginasio
+}
+
+Quadra *-- Ginasio
+
+class Ginasio {
+  - nome: String
+  - quadra: List<Quadra>
+}
+@enduml

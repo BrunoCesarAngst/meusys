@@ -1,0 +1,34 @@
+@startuml teste
+
+scale 1
+left to right direction
+skinparam PackageStyle rectangle
+actor newUser
+actor user
+rectangle meusys {
+  
+  newUser -- (register)
+  newUser -u-> user
+  user -- (login)
+  user -- (write)
+  user -- (audio)
+  user -- (video)
+  user -- (photography)
+  user -- (attach file)
+  user -- (determines)
+
+
+  (remove register item) -d.> (determines): extend
+  (incubate register item) -d.> (determines): extend
+  (reference register item) -d.> (determines): extend
+  (plan action) -d.> (determines): extend
+  (delegate) -d.> (determines): extend
+
+  (write) -d.> (register item): include
+  (audio) -d.> (register item): include
+  (video) -d.> (register item): include
+  (photography) -d.> (register item): include
+  (attach file) -d.> (register item): include
+
+}
+@enduml

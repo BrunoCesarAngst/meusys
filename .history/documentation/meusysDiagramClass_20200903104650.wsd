@@ -1,0 +1,119 @@
+@startuml meusys
+
+skinparam ClassAttributeIconSize 0
+
+class signUp {
+  - id: I
+  - firstName: string
+  - lastName: string
+  - userName: string
+  - email: string
+  - password: string
+
+  + signUp(): void
+}
+
+class User {
+  - id: I
+  - userName: string
+  - password: string
+
+  + logIn(): void
+  + signUp(): I
+}
+
+class signIn {
+  - userName: string
+  - password: string
+
+  + logIn(): void
+  + getUserId(): I
+}
+
+class registerItem {
+  - id: I
+  - description: string
+  - action: Boolean
+}
+class determinesWithoutAction {}
+class incubate {}
+class reference {}
+class determinesWithAction {}
+class delegate {}
+class planAction {}
+
+class Schedule {
+  - startDate: Date
+  - endDate: Date
+  - startTime: Time
+  - endTime: Time
+  + isDone(): Boolean
+  
+}
+
+class Date {
+  - year: I
+  - month: I
+  - day: I
+  + Date(year: I, month: I, day: I)
+  + getYear(): I
+  + getMonth(): I
+  + getDay(): I
+  + setYear(year: I): void
+  + setMonth(month: I): void
+  + setDay(day: I): void
+  + toString(): string
+  + setDate(year: I, month: I, day: I)
+}
+
+class Time {
+  - second: I
+  - minute: I
+  - hour: I
+  + Time()
+  + Time(second: I, minute: I, hour: I)
+  + getHour(): I
+  + getMinute(): I
+  + getSecond(): I
+  + setHour(hour: I): void
+  + setMinute(minute: I): void
+  + setSecond(second: I): void
+  + toString(): string
+  + setTime(second: I, minute: I, hour: I)
+  + nextSecond(): Time
+}
+
+signUp - User
+User - signIn
+
+' scale 1
+' left to right direction
+' skinparam PackageStyle rectangle
+' actor newUser
+' actor user
+' rectangle meusys {
+  ' 
+  ' newUser -- (register)
+  ' newUser -u-> user
+  ' user -- (login)
+  ' user -- (write)
+  ' user -- (audio)
+  ' user -- (video)
+  ' user -- (photography)
+  ' user -- (attach file)
+  ' user -- (determines)
+  ' user -- (act)
+' 
+  ' (write)       -d.> (register item): include
+  ' (audio)       -d.> (register item): include
+  ' (video)       -d.> (register item): include
+  ' (photography) -d.> (register item): include
+  ' (attach file) -d.> (register item): include
+' 
+  ' (determines) <.d- (delegate)               : extend
+  ' (determines) <.d- (plan action)            : extend
+  ' (determines) <.d- (remove register item)   : extend
+  ' (determines) <.d- (incubate register item) : extend
+  ' (determines) <.d- (reference register item): extend
+' }
+@enduml 

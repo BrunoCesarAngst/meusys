@@ -1,0 +1,22 @@
+@startuml meusys
+start
+:make a record;
+if (note) then (yes)
+  :register;
+  stop
+elseif (photograph) then (yes)
+  :register;
+  stop
+elseif (audio) then (yes)
+  :register;
+  stop
+elseif (video) then (yes)
+  :register;
+  stop
+elseif (attfile) then (yes)
+  :register;
+  stop
+else (noting)
+  end
+endif
+@enduml

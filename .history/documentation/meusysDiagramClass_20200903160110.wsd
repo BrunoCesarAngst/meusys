@@ -1,0 +1,129 @@
+@startuml meusys
+
+skinparam ClassAttributeIconSize 0
+
+class signUp {
+  - id: Int
+  - firstName: String
+  - lastName: String
+  - userName: String
+  - email: String
+  - password: String
+
+  + signUp(): void
+}
+
+class User {
+  - id: Int
+  - userName: String
+  - password: String
+
+  + logIn(): void
+  + signUp(): Int
+}
+
+class signIn {
+  - userName: String
+  - password: String
+
+  + logIn(): void
+  + getUserId(): Int
+}
+
+class registerItem {
+  - id: Int
+  - description: String  
+}
+class determinesWithoutAction {
+  - action: Boolean
+}
+class incubate {}
+class reference {}
+class determinesWithAction {}
+class delegate {}
+class planAction {}
+
+class ScheduleItem {
+  - startDate: Date
+  - endDate: Date
+  - startTime: Time
+  - endTime: Time
+  + isDone(): Boolean
+  
+}
+
+class ScheduleItem {
+  - startDate: Date
+  - endDate: Date
+  - startTime: Time
+  - endTime: Time
+  + isDone(): Boolean
+  
+}
+
+class Date {
+  - year: Int
+  - month: Int
+  - day: Int
+  + Date(year: Int, month: Int, day: Int)
+  + getYear(): Int
+  + getMonth(): Int
+  + getDay(): Int
+  + setYear(year: Int): void
+  + setMonth(month: Int): void
+  + setDay(day: Int): void
+  + toString(): String
+  + setDate(year: Int, month: Int, day: Int)
+}
+
+class Time {
+  - second: Int
+  - minute: Int
+  - hour: Int
+  + Time()
+  + Time(second: Int, minute: Int, hour: Int)
+  + getHour(): Int
+  + getMinute(): Int
+  + getSecond(): Int
+  + setHour(hour: Int): void
+  + setMinute(minute: Int): void
+  + setSecond(second: Int): void
+  + toString(): String
+  + setTime(second: Int, minute: Int, hour: Int)
+  + nextSecond(): Time
+}
+
+signUp - User
+User - signIn
+
+' scale 1
+' left to right direction
+' skinparam PackageStyle rectangle
+' actor newUser
+' actor user
+' rectangle meusys {
+  ' 
+  ' newUser -- (register)
+  ' newUser -u-> user
+  ' user -- (login)
+  ' user -- (write)
+  ' user -- (audio)
+  ' user -- (video)
+  ' user -- (photography)
+  ' user -- (attach file)
+  ' user -- (determines)
+  ' user -- (act)
+' 
+  ' (write)       -d.> (register item): include
+  ' (audio)       -d.> (register item): include
+  ' (video)       -d.> (register item): include
+  ' (photography) -d.> (register item): include
+  ' (attach file) -d.> (register item): include
+' 
+  ' (determines) <.d- (delegate)               : extend
+  ' (determines) <.d- (plan action)            : extend
+  ' (determines) <.d- (remove register item)   : extend
+  ' (determines) <.d- (incubate register item) : extend
+  ' (determines) <.d- (reference register item): extend
+' }
+@enduml 

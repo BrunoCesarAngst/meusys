@@ -1,0 +1,10 @@
+@startuml ginasio
+class clients {
+  - id: Int
+  - nome: String
+}
+
+class contratoAluguel {
+  
+}
+@enduml

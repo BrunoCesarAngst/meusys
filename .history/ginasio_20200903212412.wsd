@@ -1,0 +1,6 @@
+@startuml ginasio
+class clients {
+  - id: Int
+  - nome: S
+}
+@enduml

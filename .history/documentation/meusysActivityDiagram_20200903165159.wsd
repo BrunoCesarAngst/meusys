@@ -1,0 +1,16 @@
+@startuml meusys
+start
+:make a record;
+if (note) then (yes)
+  :register;
+  stop
+elseif (audio) then (yes)
+  :register;
+  stop
+elseif (audio) then (yes)
+  :register;
+  stop
+elseif (audio) then (yes)
+  :register;
+  stop
+@enduml

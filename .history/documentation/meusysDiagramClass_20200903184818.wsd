@@ -1,0 +1,79 @@
+@startuml meusys
+
+skinparam ClassAttributeIconSize 0
+
+class register {
+  - id: Int
+  - description: String
+  - type: String
+  + N
+  + createRegister(): Void
+}
+
+register o-- registerItem
+
+class registerItem {
+
+}
+
+' class determinesWithoutAction {
+'   - action: Boolean
+' }
+
+' class incubate {}
+' class reference {}
+' class determinesWithAction {}
+' class delegate {}
+' class planAction {}
+
+' class ScheduleItem {
+'   - startDate: Date
+'   - endDate: Date
+'   - startTime: Time
+'   - endTime: Time
+'   + isDone(): Boolean
+  
+' }
+
+' class ScheduleItem {
+'   - startDate: Date
+'   - endDate: Date
+'   - startTime: Time
+'   - endTime: Time
+'   + isDone(): Boolean
+  
+' }
+
+' class Date {
+'   - year: Int
+'   - month: Int
+'   - day: Int
+'   + Date(year: Int, month: Int, day: Int)
+'   + getYear(): Int
+'   + getMonth(): Int
+'   + getDay(): Int
+'   + setYear(year: Int): void
+'   + setMonth(month: Int): void
+'   + setDay(day: Int): void
+'   + toString(): String
+'   + setDate(year: Int, month: Int, day: Int)
+' }
+
+' class Time {
+'   - second: Int
+'   - minute: Int
+'   - hour: Int
+'   + Time()
+'   + Time(second: Int, minute: Int, hour: Int)
+'   + getHour(): Int
+'   + getMinute(): Int
+'   + getSecond(): Int
+'   + setHour(hour: Int): void
+'   + setMinute(minute: Int): void
+'   + setSecond(second: Int): void
+'   + toString(): String
+'   + setTime(second: Int, minute: Int, hour: Int)
+'   + nextSecond(): Time
+' }
+
+@enduml 

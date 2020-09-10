@@ -1,0 +1,6 @@
+@startuml teste
+
+scale 2
+start
+:do something
+if

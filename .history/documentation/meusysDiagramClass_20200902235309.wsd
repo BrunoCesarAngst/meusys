@@ -1,0 +1,62 @@
+@startuml meusys
+
+class signUp {
+  - firstName
+  - email: char
+  - password: char
+
+  - signUp(): void
+}
+
+class user {
+  - id: int
+  - email: char
+  - password: char
+}
+
+class customer {
+  - id: int
+  - name: char
+  - email: char
+  - password: char
+}
+class login {}
+class registerItem {}
+class determinesWithoutAction {}
+class incubate {}
+class reference {}
+class determinesWithAction {}
+class delegate {}
+class planAction {}
+
+' scale 1
+' left to right direction
+' skinparam PackageStyle rectangle
+' actor newUser
+' actor user
+' rectangle meusys {
+  ' 
+  ' newUser -- (register)
+  ' newUser -u-> user
+  ' user -- (login)
+  ' user -- (write)
+  ' user -- (audio)
+  ' user -- (video)
+  ' user -- (photography)
+  ' user -- (attach file)
+  ' user -- (determines)
+  ' user -- (act)
+' 
+  ' (write)       -d.> (register item): include
+  ' (audio)       -d.> (register item): include
+  ' (video)       -d.> (register item): include
+  ' (photography) -d.> (register item): include
+  ' (attach file) -d.> (register item): include
+' 
+  ' (determines) <.d- (delegate)               : extend
+  ' (determines) <.d- (plan action)            : extend
+  ' (determines) <.d- (remove register item)   : extend
+  ' (determines) <.d- (incubate register item) : extend
+  ' (determines) <.d- (reference register item): extend
+' }
+@enduml 

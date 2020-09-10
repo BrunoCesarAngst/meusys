@@ -1,0 +1,22 @@
+@startuml teste
+
+scale 1
+left to right direction
+skinparam PackageStyle rect
+actor newUser
+actor user
+rectangle meusys {
+  newUser -- (register)
+  user -- (login)
+  user -- (write)
+  user -- (audio)
+  user -- (video)
+  user -- (photography)
+  user -- (attach file)
+   (register item) .> (write): include
+  (audio) .> (register item): include
+  (video) .> (register item): include
+  (photography) .> (register item): include
+  (attach file) .> (register item): include
+}
+@enduml

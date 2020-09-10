@@ -1,0 +1,8 @@
+@startuml ginasio
+class clients {
+  - id: Int
+  - nome: String
+}
+
+class contra
+@enduml

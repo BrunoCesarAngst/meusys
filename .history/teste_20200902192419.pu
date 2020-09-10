@@ -1,0 +1,10 @@
+@startuml teste
+
+scale 2
+start
+:do something
+if (?) then (val1)
+  
+else (val2)
+  
+endif
