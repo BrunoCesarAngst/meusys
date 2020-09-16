@@ -2,9 +2,19 @@
 
 skinparam ClassAttributeIconSize 0
 
-class inbox {}
+class inbox {
+  - id: Int
+  - description: String
+  - type: String
+  + NewRegister(): Void
+  + createRegister(): Void
+}
 
-class inboxItems {}
+register o-- registerItem
+
+class registerItem {
+
+}
 
 ' class determinesWithoutAction {
 '   - action: Boolean

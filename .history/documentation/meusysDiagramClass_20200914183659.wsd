@@ -4,7 +4,11 @@ skinparam ClassAttributeIconSize 0
 
 class inbox {}
 
-class inboxItems {}
+register o-- registerItem
+
+class registerItem {
+
+}
 
 ' class determinesWithoutAction {
 '   - action: Boolean
