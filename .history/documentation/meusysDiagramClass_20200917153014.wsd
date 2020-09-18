@@ -1,0 +1,11 @@
+@startuml meusys
+
+
+  class Something {  ' alguma coisa
+    - id: Int
+    + description: String
+  }
+
+}
+
+@enduml

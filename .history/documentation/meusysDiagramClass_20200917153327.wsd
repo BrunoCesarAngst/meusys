@@ -1,0 +1,14 @@
+@startuml meusys
+
+package Capture <<Rectangle>> {
+
+  ' alguma coisa
+  class Something {  
+    - id: Int
+    + title: String
+    + description: String
+  }
+
+}
+
+@enduml 

@@ -20,8 +20,6 @@ package Explain <<Rectangle>> {
 
 }
 
-class teste
-
-test (0,*)<|-- Something
+class 
 
 @enduml 

@@ -14,14 +14,11 @@ package Capture <<Rectangle>> {
 package Explain <<Rectangle>> {
 
   ' alguma coisa
-  class SomethingHasAction<extends Something> {  
-    + hasAction: Boolean
+  class SomethingHasAction<extends Something {  
+    + id: Int
+    + created: Date
   }
 
 }
-
-class teste
-
-test (0,*)<|-- Something
 
 @enduml 

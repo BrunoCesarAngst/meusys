@@ -15,13 +15,9 @@ package Explain <<Rectangle>> {
 
   ' alguma coisa
   class SomethingHasAction<extends Something> {  
-    + hasAction: Boolean
+    + hasAction: 
   }
 
 }
-
-class teste
-
-test (0,*)<|-- Something
 
 @enduml 

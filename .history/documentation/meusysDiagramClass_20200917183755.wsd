@@ -5,23 +5,20 @@ package Capture <<Rectangle>> {
   ' alguma coisa
   class Something {  
     + id: Int
-    + what: String
+    + 
     + created: Date
   }
 
 }
 
-package Explain <<Rectangle>> {
+package Capture <<Rectangle>> {
 
   ' alguma coisa
-  class SomethingHasAction<extends Something> {  
-    + hasAction: Boolean
+  class Something {  
+    + id: Int
+    + created: Date
   }
 
 }
-
-class teste
-
-test (0,*)<|-- Something
 
 @enduml 
